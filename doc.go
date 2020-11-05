@@ -17,21 +17,20 @@ inclusion into the project.
 
 PURPOSE
 
-Verify the ownership, group, age, permissions, size or existence of specific
-files or directories.
+This repo is intended to provide Nagios plugins that may be used to monitor an
+ILLiad instance. As of this writing, a plugin named check_illiad_emails is
+available that may be used to monitor email notifications.
 
 FEATURES
 
-• Age checks: CRITICAL and WARNING thresholds
+The check_illiad_emails plugin supports monitoring Pending email
+notifications:
 
-• Size checks: CRITICAL and WARNING thresholds
+• greater number queued than specified
+• that have remained "in the queue" for longer than a specified amount of time
 
-• Existence checks: CRITICAL or WARNING (as specified) if present
-
-• Username checks: CRITICAL or WARNING (as specified) if missing
-
-• Group Name checks: CRITICAL or WARNING (as specified) if missing
-
+Default values are provided, but are easily overridden with custom values in
+order to match usage patterns for each instance.
 
 USAGE
 
