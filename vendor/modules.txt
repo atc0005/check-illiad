@@ -1,0 +1,24 @@
+# github.com/alexflint/go-arg v1.3.0
+## explicit
+github.com/alexflint/go-arg
+# github.com/alexflint/go-scalar v1.0.0
+github.com/alexflint/go-scalar
+# github.com/atc0005/go-nagios v0.5.1
+## explicit
+github.com/atc0005/go-nagios
+# github.com/denisenkom/go-mssqldb v0.0.0-20201104001602-427686ac8ec1
+## explicit
+github.com/denisenkom/go-mssqldb
+github.com/denisenkom/go-mssqldb/internal/cp
+github.com/denisenkom/go-mssqldb/internal/decimal
+github.com/denisenkom/go-mssqldb/internal/querytext
+# github.com/golang-sql/civil v0.0.0-20190719163853-cb61b32ac6fe
+github.com/golang-sql/civil
+# github.com/rs/zerolog v1.20.0
+## explicit
+github.com/rs/zerolog
+github.com/rs/zerolog/internal/cbor
+github.com/rs/zerolog/internal/json
+github.com/rs/zerolog/log
+# golang.org/x/crypto v0.0.0-20190325154230-a5d413f7728c
+golang.org/x/crypto/md4
