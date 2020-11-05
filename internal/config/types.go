@@ -38,7 +38,7 @@ type DBServer struct {
 	Instance    *string `arg:"--instance,env:CHECK_ILLIAD_DBSERVER_INSTANCE" help:"The database server instance name. This may be blank."`
 	Username    *string `arg:"--username,env:CHECK_ILLIAD_DBSERVER_USERNAME" help:"The username used to connect to the database server. An account with read-only access to the database used by the ILLiad software is sufficient."`
 	Password    *string `arg:"--password,env:CHECK_ILLIAD_DBSERVER_PASSWORD" help:"The plaintext password used to connect to the database server. An account with read-only access to the database used by the ILLiad software is sufficient."`
-	EncryptMode *string `arg:"--encrypt-mode,env:CHECK_ILLIAD_DBSERVER_ENCRYPT_MODE" help:"Whether data sent between client and server is encrypted."`
+	EncryptMode *string `arg:"--encrypt-mode,env:CHECK_ILLIAD_DBSERVER_ENCRYPT_MODE" help:"Whether data sent between client and server is encrypted. true for yes, false for login packet only and disable for no encryption."`
 	TrustCert   *bool   `arg:"--trust-cert,env:CHECK_ILLIAD_TRUST_CERT" help:"Whether the certificate should be trusted as-is without validation. WARNING: TLS is susceptible to man-in-the-middle attacks if enabling this option."`
 }
 
