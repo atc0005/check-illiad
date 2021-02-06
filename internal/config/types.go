@@ -8,6 +8,7 @@
 package config
 
 import (
+	"database/sql"
 	"time"
 
 	"github.com/alexflint/go-arg"
@@ -45,10 +46,10 @@ type DBServer struct {
 // TableEMailCopies reflects fields from the `EMailCopies` table from the
 // `ILLData` database.
 type TableEMailCopies struct {
-	TransactionNumber int       `arg:"-"`
-	EMailDate         time.Time `arg:"-"`
-	Status            string    `arg:"-"`
-	Note              string    `arg:"-"`
+	TransactionNumber int            `arg:"-"`
+	EMailDate         time.Time      `arg:"-"`
+	Status            sql.NullString `arg:"-"`
+	Note              sql.NullString `arg:"-"`
 }
 
 // Database is the user-specified settings for the database used by the ILLiad
