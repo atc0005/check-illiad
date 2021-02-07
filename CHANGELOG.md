@@ -26,6 +26,32 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.1.1] - 2021-02-07
+
+### Overview
+
+- Bug fixes
+- Dependency updates
+- built using Go 1.15.8
+
+### Changed
+
+- dependencies
+  - `atc0005/go-nagios`
+    - `v0.5.1` to `v0.6.0`
+  - `actions/setup-node`
+    - `v2.1.2` to `v2.1.4`
+  - Built using `Go 1.15.8`
+    - Windows (x86, x64)
+    - Linux (x86, x64)
+- Remove temporary workaround for swallowed panics
+- Replace godoc.org badge with pkg.go.dev badge
+
+### Fixed
+
+- `sql: Scan error on column index 3, name "Note": converting NULL to string
+  is unsupported`
+
 ## [v0.1.0] - 2020-11-05
 
 ### Added
@@ -48,5 +74,6 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.1...HEAD
+[v0.1.1]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.1
 [v0.1.0]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.0
