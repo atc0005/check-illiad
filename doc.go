@@ -27,6 +27,7 @@ The check_illiad_emails plugin supports monitoring Pending email
 notifications:
 
 • greater number queued than specified
+
 • that have remained "in the queue" for longer than a specified amount of time
 
 Default values are provided, but are easily overridden with custom values in
