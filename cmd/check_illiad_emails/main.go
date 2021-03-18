@@ -149,8 +149,8 @@ func main() {
 		Str("host", cfg.DBServerHost()).
 		Str("instance", cfg.DBServerInstance()).
 		Int("port", cfg.DBServerPort()).
-		Str("database", cfg.DBServerHost()).
-		Str("username", cfg.DBServerHost()).
+		Str("database", cfg.DBName()).
+		Str("username", cfg.DBServerUsername()).
 		Str("encrypt_mode", cfg.DBServerEncryptMode()).
 		Bool("validate_cert", !cfg.DBServerTrustCert()).
 		Msg("connection established")
