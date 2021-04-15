@@ -26,6 +26,33 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.1.2] - 2021-04-15
+
+### Overview
+
+- Bug fixes
+- Dependency updates
+- built using Go 1.16.3
+
+### Changed
+
+- dependencies
+  - built using `Go 1.16.3`
+    - Windows (x86, x64)
+    - Linux (x86, x64)
+  - `denisenkom/go-mssqldb`
+    - `v0.0.0-20201104001602-427686ac8ec1` to `v0.10.0`
+  - `rs/zerolog`
+    - `v1.20.0` to `v1.21.0`
+  - `actions/setup-node`
+    - `v2.1.4` to `v2.1.5`
+
+### Fixed
+
+- Fix description of possible values for host flag
+- Fix invalid db and username debug output
+- Add missing newline between bullet points
+
 ## [v0.1.1] - 2021-02-07
 
 ### Overview
@@ -74,6 +101,7 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.2...HEAD
+[v0.1.2]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.2
 [v0.1.1]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.1
 [v0.1.0]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.0
