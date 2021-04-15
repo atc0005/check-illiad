@@ -87,7 +87,7 @@ func (b *Bulk) sendBulkCommand(ctx context.Context) (err error) {
 			b.bulkColumns = append(b.bulkColumns, *bulkCol)
 			b.dlogf("Adding column %s %s %#x", colname, bulkCol.ColName, bulkCol.ti.TypeId)
 		} else {
-			return fmt.Errorf("Column %s does not exist in destination table %s", colname, b.tablename)
+			return fmt.Errorf("column %s does not exist in destination table %s", colname, b.tablename)
 		}
 	}
 
@@ -167,7 +167,7 @@ func (b *Bulk) AddRow(row []interface{}) (err error) {
 	}
 
 	if len(row) != len(b.bulkColumns) {
-		return fmt.Errorf("Row does not have the same number of columns than the destination table %d %d",
+		return fmt.Errorf("row does not have the same number of columns than the destination table %d %d",
 			len(row), len(b.bulkColumns))
 	}
 
@@ -216,7 +216,7 @@ func (b *Bulk) makeRowData(row []interface{}) ([]byte, error) {
 }
 
 func (b *Bulk) Done() (rowcount int64, err error) {
-	if b.headerSent == false {
+	if !b.headerSent {
 		//no rows had been sent
 		return 0, nil
 	}
@@ -234,24 +234,13 @@ func (b *Bulk) Done() (rowcount int64, err error) {
 
 	buf.FinishPacket()
 
-	tokchan := make(chan tokenStruct, 5)
-	go processResponse(b.ctx, b.cn.sess, tokchan, nil)
-
-	var rowCount int64
-	for token := range tokchan {
-		switch token := token.(type) {
-		case doneStruct:
-			if token.Status&doneCount != 0 {
-				rowCount = int64(token.RowCount)
-			}
-			if token.isError() {
-				return 0, token.getError()
-			}
-		case error:
-			return 0, b.cn.checkBadConn(token)
-		}
+	reader := startReading(b.cn.sess, b.ctx, nil)
+	err = reader.iterateResponse()
+	if err != nil {
+		return 0, b.cn.checkBadConn(err)
 	}
-	return rowCount, nil
+
+	return reader.rowCount, nil
 }
 
 func (b *Bulk) createColMetadata() []byte {
