@@ -26,6 +26,43 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.1.3] - 2021-07-16
+
+### Overview
+
+- Add test
+- Dependency updates
+- built using Go 1.16.6
+  - Statically linked
+  - Linux (x86, x64)
+
+### Added
+
+- Add test
+  - basic custom flags parsing using example from README
+
+- Add "canary" Dockerfile to track stable Go releases, serve as a reminder to
+  generate fresh binaries
+
+### Changed
+
+- dependencies
+  - `Go`
+    - `1.16.3` to `1.16.6`
+    - canary file updated from `1.16.5` to `1.16.6`
+  - `atc0005/go-nagios`
+    - `v0.6.0` to `v0.6.1`
+  - `alexflint/go-arg`
+    - `v1.3.0` to `v1.4.2`
+  - `pelletier/go-toml`
+    - `v1.9.2` to `v1.9.3`
+  - `rs/zerolog`
+    - `v1.22.0` to `v1.23.0`
+  - `actions/setup-node`
+    - updated from `v2.1.5` to `v2.2.0`
+    - update `node-version` value to always use latest LTS version instead of
+      hard-coded version
+
 ## [v0.1.2] - 2021-04-15
 
 ### Overview
@@ -101,7 +138,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.2...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.3...HEAD
+[v0.1.3]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.3
 [v0.1.2]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.2
 [v0.1.1]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.1
 [v0.1.0]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.0
