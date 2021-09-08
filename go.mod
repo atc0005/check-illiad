@@ -11,7 +11,7 @@ go 1.14
 
 require (
 	github.com/alexflint/go-arg v1.4.2
-	github.com/atc0005/go-nagios v0.6.1
+	github.com/atc0005/go-nagios v0.7.0
 	github.com/denisenkom/go-mssqldb v0.10.0
 	github.com/rs/zerolog v1.24.0
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9 // indirect
