@@ -14,7 +14,7 @@ github.com/denisenkom/go-mssqldb/internal/decimal
 github.com/denisenkom/go-mssqldb/internal/querytext
 # github.com/golang-sql/civil v0.0.0-20190719163853-cb61b32ac6fe
 github.com/golang-sql/civil
-# github.com/rs/zerolog v1.24.0
+# github.com/rs/zerolog v1.25.0
 ## explicit
 github.com/rs/zerolog
 github.com/rs/zerolog/internal/cbor
