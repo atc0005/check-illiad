@@ -26,6 +26,28 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.1.5] - 2021-09-25
+
+### Overview
+
+- Dependency updates
+- built using Go 1.16.8
+  - Statically linked
+  - Windows (x86, x64)
+  - Linux (x86, x64)
+
+### Changed
+
+- Dependencies
+  - `Go`
+    - `1.16.7` to `1.16.8`
+  - `denisenkom/go-mssqldb`
+    - `v0.10.0` to `v0.11.0`
+  - `atc0005/go-nagios`
+    - `v0.6.1` to `v0.7.0`
+  - `rs/zerolog`
+    - `v1.23.0` to `v1.25.0`
+
 ## [v0.1.4] - 2021-08-08
 
 ### Overview
@@ -161,7 +183,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.4...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.5...HEAD
+[v0.1.5]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.5
 [v0.1.4]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.4
 [v0.1.3]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.3
 [v0.1.2]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.2
