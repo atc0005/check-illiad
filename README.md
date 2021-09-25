@@ -22,6 +22,8 @@ Go-based tooling to check/verify an ILLiad server instance.
   - [Building source code](#building-source-code)
   - [Running](#running)
 - [Installation](#installation)
+  - [From source](#from-source)
+  - [Using release binaries](#using-release-binaries)
 - [Configuration](#configuration)
   - [Precedence](#precedence)
   - [Command-line Arguments](#command-line-arguments)
@@ -89,6 +91,8 @@ been tested.
 
 ## Installation
 
+### From source
+
 1. [Download][go-docs-download] Go
 1. [Install][go-docs-install] Go
    - NOTE: Pay special attention to the remarks about `$HOME/.profile`
@@ -135,6 +139,15 @@ been tested.
      - look in `/tmp/check-illiad/release_assets/check_illiad_emails/`
    - if using `go build`
      - look in `/tmp/check-illiad/`
+
+### Using release binaries
+
+1. Download the [latest release][repo-url] binaries
+1. Deploy
+   - Place `check_illiad_emails` in the same location where your distro's
+     package manager places other Nagios plugins
+     - as `/usr/lib/nagios/plugins/check_illiad_emails` on Debian-based systems
+     - as `/usr/lib64/nagios/plugins/check_illiad_emails` on RedHat-based systems
 
 ## Configuration
 
