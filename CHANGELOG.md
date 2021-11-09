@@ -26,6 +26,30 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.1.6] - 2021-11-09
+
+### Overview
+
+- Dependency updates
+- built using Go 1.16.10
+  - Statically linked
+  - Windows (x86, x64)
+  - Linux (x86, x64)
+
+### Changed
+
+- Dependencies
+  - `Go`
+    - `1.16.8` to `1.16.10`
+  - `atc0005/go-nagios`
+    - `v0.7.0` to `v0.8.1`
+  - `rs/zerolog`
+    - `v1.25.0` to `v1.26.0`
+  - `actions/checkout`
+    - `v2.3.4` to `v2.4.0`
+  - `actions/setup-node`
+    - `v2.4.0` to `v2.4.1`
+
 ## [v0.1.5] - 2021-09-25
 
 ### Overview
@@ -183,7 +207,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.5...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.6...HEAD
+[v0.1.6]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.6
 [v0.1.5]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.5
 [v0.1.4]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.4
 [v0.1.3]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.3
