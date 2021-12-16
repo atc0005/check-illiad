@@ -15,12 +15,11 @@ github.com/denisenkom/go-mssqldb/internal/querytext
 github.com/denisenkom/go-mssqldb/msdsn
 # github.com/golang-sql/civil v0.0.0-20190719163853-cb61b32ac6fe
 github.com/golang-sql/civil
-# github.com/rs/zerolog v1.26.0
+# github.com/rs/zerolog v1.26.1
 ## explicit
 github.com/rs/zerolog
 github.com/rs/zerolog/internal/cbor
 github.com/rs/zerolog/internal/json
 github.com/rs/zerolog/log
-# golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
-## explicit
+# golang.org/x/crypto v0.0.0-20211215165025-cf75a172585e
 golang.org/x/crypto/md4

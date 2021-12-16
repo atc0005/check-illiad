@@ -13,6 +13,5 @@ require (
 	github.com/alexflint/go-arg v1.4.2
 	github.com/atc0005/go-nagios v0.8.1
 	github.com/denisenkom/go-mssqldb v0.11.0
-	github.com/rs/zerolog v1.26.0
-	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9 // indirect
+	github.com/rs/zerolog v1.26.1
 )
