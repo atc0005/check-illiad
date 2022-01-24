@@ -7,7 +7,7 @@ github.com/alexflint/go-scalar
 # github.com/atc0005/go-nagios v0.8.2
 ## explicit; go 1.14
 github.com/atc0005/go-nagios
-# github.com/denisenkom/go-mssqldb v0.11.0
+# github.com/denisenkom/go-mssqldb v0.12.0
 ## explicit; go 1.11
 github.com/denisenkom/go-mssqldb
 github.com/denisenkom/go-mssqldb/internal/cp
@@ -17,6 +17,9 @@ github.com/denisenkom/go-mssqldb/msdsn
 # github.com/golang-sql/civil v0.0.0-20190719163853-cb61b32ac6fe
 ## explicit
 github.com/golang-sql/civil
+# github.com/golang-sql/sqlexp v0.0.0-20170517235910-f1bb20e5a188
+## explicit
+github.com/golang-sql/sqlexp
 # github.com/rs/zerolog v1.26.1
 ## explicit; go 1.15
 github.com/rs/zerolog
