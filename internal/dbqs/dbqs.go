@@ -15,7 +15,7 @@ import (
 // RowsCount returns the number of rows for a specified table.
 func RowsCount(db *sql.DB, table string) (int, error) {
 	var rowsCount int
-	rcQuery := fmt.Sprintf("SELECT COUNT(*) as count FROM %s", table)
+	rcQuery := "SELECT COUNT(*) as count FROM " + table
 	if err := db.QueryRow(rcQuery).Scan(&rowsCount); err != nil {
 		return -1, fmt.Errorf(
 			"failed to retrieve row count for table %s: %w",
