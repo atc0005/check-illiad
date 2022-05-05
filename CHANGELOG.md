@@ -26,6 +26,22 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.1.10] - 2022-05-05
+
+### Overview
+
+- Dependency updates
+- built using Go 1.17.9
+  - Statically linked
+  - Windows (x86, x64)
+  - Linux (x86, x64)
+
+### Changed
+
+- Dependencies
+  - `Go`
+    - `1.17.7` to `1.17.9`
+
 ## [v0.1.9] - 2022-03-02
 
 ### Overview
@@ -281,7 +297,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.9...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.10...HEAD
+[v0.1.10]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.10
 [v0.1.9]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.9
 [v0.1.8]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.8
 [v0.1.7]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.7
