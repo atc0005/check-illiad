@@ -36,7 +36,7 @@ func main() {
 	if configErr != nil {
 		log.Err(configErr).Msg("error validating configuration")
 
-		nagiosExitState.LastError = configErr
+		nagiosExitState.AddError(configErr)
 		nagiosExitState.ExitStatusCode = nagios.StateCRITICALExitCode
 		nagiosExitState.ServiceOutput = fmt.Sprintf(
 			"%s: Failed to load configuration: %v",
@@ -109,7 +109,7 @@ func main() {
 	if dbOpenErr != nil {
 		cfg.Log.Error().Err(dbOpenErr).Msg("open connection failed")
 
-		nagiosExitState.LastError = dbOpenErr
+		nagiosExitState.AddError(dbOpenErr)
 		nagiosExitState.ServiceOutput = fmt.Sprintf(
 			"%s: Error connecting to %s",
 			nagios.StateCRITICALLabel,
@@ -134,7 +134,7 @@ func main() {
 	if err := db.Ping(); err != nil {
 		cfg.Log.Error().Err(err).Msg("error verifying connection to server")
 
-		nagiosExitState.LastError = err
+		nagiosExitState.AddError(err)
 		nagiosExitState.ExitStatusCode = nagios.StateCRITICALExitCode
 		nagiosExitState.ServiceOutput = fmt.Sprintf(
 			"%s: Failed to establish connection to database: %v",
@@ -163,7 +163,7 @@ func main() {
 			Str("table_name", config.ILLiadDatabaseEMailTable).
 			Msg("failed to execute query")
 
-		nagiosExitState.LastError = rowCountErr
+		nagiosExitState.AddError(rowCountErr)
 		nagiosExitState.ExitStatusCode = nagios.StateCRITICALExitCode
 		nagiosExitState.ServiceOutput = fmt.Sprintf(
 			"%s: Failed to execute query against database: %v",
@@ -184,7 +184,7 @@ func main() {
 			Str("table_name", config.ILLiadDatabaseEMailTable).
 			Msg("no rows found in table")
 
-		nagiosExitState.LastError = rowCountErr
+		nagiosExitState.AddError(rowCountErr)
 		nagiosExitState.ExitStatusCode = nagios.StateCRITICALExitCode
 		nagiosExitState.ServiceOutput = fmt.Sprintf(
 			"%s: Email notifications history missing in table %q in database %q",
@@ -200,7 +200,7 @@ func main() {
 	if err := db.QueryRow(config.QueryILLiadEMailPendingCount).Scan(&pendingEMailCount); err != nil {
 		cfg.Log.Error().Err(err).Msg("failed to execute query")
 
-		nagiosExitState.LastError = err
+		nagiosExitState.AddError(err)
 		nagiosExitState.ExitStatusCode = nagios.StateCRITICALExitCode
 		nagiosExitState.ServiceOutput = fmt.Sprintf(
 			"%s: Failed to retrieve pending emails count: %v",
@@ -220,7 +220,7 @@ func main() {
 		rows, queryErr := db.Query(config.QueryILLiadEMailPendingEmailValues)
 		// rows, queryErr := db.Query(config.QueryILLiadEMailCancelledEmailValues)
 		if queryErr != nil {
-			nagiosExitState.LastError = queryErr
+			nagiosExitState.AddError(queryErr)
 			nagiosExitState.ExitStatusCode = nagios.StateCRITICALExitCode
 			cfg.Log.Error().Err(queryErr).Msg("failed to execute query")
 
@@ -252,7 +252,7 @@ func main() {
 				&emailNotifyEntry.Note,
 			)
 			if scanErr != nil {
-				nagiosExitState.LastError = scanErr
+				nagiosExitState.AddError(scanErr)
 				nagiosExitState.ExitStatusCode = nagios.StateCRITICALExitCode
 				cfg.Log.Error().Err(scanErr).Msg("failed to retrieve email notification data")
 
@@ -273,7 +273,7 @@ func main() {
 		cfg.Log.Debug().Msg("completed scanning all row objects")
 
 		if err := rows.Err(); err != nil {
-			nagiosExitState.LastError = err
+			nagiosExitState.AddError(err)
 			nagiosExitState.ExitStatusCode = nagios.StateCRITICALExitCode
 			cfg.Log.Error().Err(err).Msg("error occurred during rows scan loop")
 
@@ -313,7 +313,7 @@ func main() {
 			switch {
 			case entry.EMailDate.Before(criticalTime) || entry.EMailDate.Equal(criticalTime):
 
-				nagiosExitState.LastError = errOldPendingNotifications
+				nagiosExitState.AddError(errOldPendingNotifications)
 				nagiosExitState.ExitStatusCode = nagios.StateCRITICALExitCode
 
 				nagiosExitState.ServiceOutput = fmt.Sprintf(
@@ -328,7 +328,7 @@ func main() {
 
 			case entry.EMailDate.Before(warningTime) || entry.EMailDate.Equal(warningTime):
 
-				nagiosExitState.LastError = errOldPendingNotifications
+				nagiosExitState.AddError(errOldPendingNotifications)
 				nagiosExitState.ExitStatusCode = nagios.StateWARNINGExitCode
 
 				nagiosExitState.ServiceOutput = fmt.Sprintf(
@@ -367,7 +367,7 @@ func main() {
 				nagiosExitState.ExitStatusCode = nagios.StateWARNINGExitCode
 			}
 
-			nagiosExitState.LastError = fmt.Errorf(summaryMsg)
+			nagiosExitState.AddError(fmt.Errorf(summaryMsg))
 			nagiosExitState.ServiceOutput = fmt.Sprintf(
 				"%s: %s [CRITICAL: %v, WARNING: %v, total pending: %d]",
 				nagios.StateCRITICALLabel,
@@ -397,7 +397,6 @@ func main() {
 		Bool("count_thresholds_provided", cfg.EmailCountThresholds().Set).
 		Msg(statusMsg)
 
-	nagiosExitState.LastError = nil
 	nagiosExitState.ServiceOutput = fmt.Sprintf(
 		"%s: %s",
 		nagios.StateOKLabel,
