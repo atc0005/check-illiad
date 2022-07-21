@@ -26,6 +26,34 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.1.12] - 2022-07-21
+
+### Overview
+
+- Dependency updates
+- Bugfixes
+- built using Go 1.17.12
+  - Statically linked
+  - Windows (x86, x64)
+  - Linux (x86, x64)
+
+### Changed
+
+- Dependencies
+  - `Go`
+    - `1.17.10` to `1.17.12`
+  - `denisenkom/go-mssqldb`
+    - `v0.12.0` to `v0.12.2`
+  - `atc0005/go-nagios`
+    - `v0.8.2` to `v0.9.1`
+  - `rs/zerolog`
+    - `v1.26.1` to `v1.27.0`
+
+### Fixed
+
+- (GH-110) Update lintinstall Makefile recipe
+- (GH-111) Fix various atc0005/go-nagios usage linting errors
+
 ## [v0.1.11] - 2022-05-13
 
 ### Overview
@@ -313,7 +341,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.11...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.12...HEAD
+[v0.1.12]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.12
 [v0.1.11]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.11
 [v0.1.10]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.10
 [v0.1.9]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.9
