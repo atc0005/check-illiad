@@ -26,6 +26,27 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.1.13] - 2022-08-24
+
+### Overview
+
+- Dependency updates
+- Bug fixes
+- built using Go 1.17.13
+  - Statically linked
+  - Windows (x86, x64)
+  - Linux (x86, x64)
+
+### Changed
+
+- Dependencies
+  - `Go`
+    - `1.17.12` to `1.17.13`
+
+### Fixed
+
+- (GH-115) Apply Go 1.19 specific doc comments linting fixes
+
 ## [v0.1.12] - 2022-07-21
 
 ### Overview
@@ -341,7 +362,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.12...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.13...HEAD
+[v0.1.13]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.13
 [v0.1.12]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.12
 [v0.1.11]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.11
 [v0.1.10]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.10
