@@ -19,15 +19,15 @@ linters:
     - depguard
     - dogsled
     - dupl
+    - exportloopref
     - goconst
     - gocritic
     - gofmt
     - goimports
-    - golint
     - gosec
     - maligned
     - misspell
     - prealloc
-    - scopelint
+    - revive
     - stylecheck
     - unconvert
