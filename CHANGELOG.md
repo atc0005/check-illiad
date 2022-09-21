@@ -26,6 +26,36 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.1.14] - 2022-09-21
+
+### Overview
+
+- Bug fixes
+- Dependency updates
+- GitHub Actions Workflows updates
+- built using Go 1.19.1
+  - Statically linked
+  - Windows (x86, x64)
+  - Linux (x86, x64)
+
+### Changed
+
+- Dependencies
+  - `Go`
+    - `1.17.13` to `1.19.1`
+  - `atc0005/go-nagios`
+    - `v0.9.1` to `v0.10.0`
+  - `rs/zerolog`
+    - `v1.27.0` to `v1.28.0`
+  - `github/codeql-action`
+    - `v2.1.21` to `v2.1.24`
+- (GH-119) Update project to Go 1.19
+- (GH-120) Update Makefile and GitHub Actions Workflows
+
+### Fixed
+
+- (GH-118) Add missing cmd doc file
+
 ## [v0.1.13] - 2022-08-24
 
 ### Overview
@@ -362,7 +392,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.13...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.14...HEAD
+[v0.1.14]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.14
 [v0.1.13]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.13
 [v0.1.12]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.12
 [v0.1.11]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.11
