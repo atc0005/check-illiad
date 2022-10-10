@@ -11,7 +11,7 @@ go 1.19
 
 require (
 	github.com/alexflint/go-arg v1.4.3
-	github.com/atc0005/go-nagios v0.10.0
+	github.com/atc0005/go-nagios v0.10.1
 	github.com/denisenkom/go-mssqldb v0.12.2
 	github.com/rs/zerolog v1.28.0
 )
