@@ -7,7 +7,7 @@ github.com/alexflint/go-scalar
 # github.com/atc0005/go-nagios v0.10.1
 ## explicit; go 1.19
 github.com/atc0005/go-nagios
-# github.com/denisenkom/go-mssqldb v0.12.2
+# github.com/denisenkom/go-mssqldb v0.12.3
 ## explicit; go 1.13
 github.com/denisenkom/go-mssqldb
 github.com/denisenkom/go-mssqldb/internal/cp
@@ -32,7 +32,7 @@ github.com/rs/zerolog
 github.com/rs/zerolog/internal/cbor
 github.com/rs/zerolog/internal/json
 github.com/rs/zerolog/log
-# golang.org/x/crypto v0.0.0-20211215165025-cf75a172585e
+# golang.org/x/crypto v0.0.0-20220622213112-05595931fe9d
 ## explicit; go 1.17
 golang.org/x/crypto/md4
 # golang.org/x/sys v0.0.0-20210927094055-39ccf1dd6fa6
