@@ -26,6 +26,46 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.1.15] - 2022-12-09
+
+### Overview
+
+- Bug fixes
+- Dependency updates
+- GitHub Actions Workflows updates
+- built using Go 1.19.4
+  - Statically linked
+  - Windows (x86, x64)
+  - Linux (x86, x64)
+
+### Changed
+
+- Dependencies
+  - `Go`
+    - `1.19.1` to `1.19.4`
+  - `atc0005/go-nagios`
+    - `v0.10.0` to `v0.10.2`
+  - `github.com/denisenkom/go-mssqldb`
+    - `v0.12.2` to `v0.12.3`
+  - `github.com/mattn/go-colorable`
+    - `v0.1.12` to `v0.1.13`
+  - `github.com/mattn/go-isatty`
+    - `v0.0.14` to `v0.0.16`
+  - `github.com/golang-sql/civil`
+    - `v0.0.0-20190719163853-cb61b32ac6fe` to
+      `v0.0.0-20220223132316-b832511892a9`
+  - `github.com/alexflint/go-scalar`
+    - `v1.1.0` to `v1.2.0`
+  - `golang.org/x/crypto`
+    - `v0.0.0-20220622213112-05595931fe9d` to `v0.3.0`
+  - `golang.org/x/sys`
+    - `v0.0.0-20210927094055-39ccf1dd6fa6` to `v0.3.0`
+- (GH-129) Refactor GitHub Actions workflows to import logic
+
+### Fixed
+
+- (GH-136) Fix Makefile Go module base path detection
+
 ## [v0.1.14] - 2022-09-21
 
 ### Overview
@@ -392,7 +432,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.14...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.15...HEAD
+[v0.1.15]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.15
 [v0.1.14]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.14
 [v0.1.13]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.13
 [v0.1.12]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.12
