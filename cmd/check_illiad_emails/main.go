@@ -108,10 +108,10 @@ func main() {
 		plugin.AddError(dbOpenErr)
 		plugin.ServiceOutput = fmt.Sprintf(
 			"%s: Error connecting to %s",
-			nagios.StateCRITICALLabel,
+			nagios.StateUNKNOWNLabel,
 			cfg.DBServerHost(),
 		)
-		plugin.ExitStatusCode = nagios.StateCRITICALExitCode
+		plugin.ExitStatusCode = nagios.StateUNKNOWNExitCode
 
 		// no need to go any further, we *want* to exit right away; we don't
 		// have a connection to the remote server and there isn't anything
@@ -131,10 +131,10 @@ func main() {
 		cfg.Log.Error().Err(err).Msg("error verifying connection to server")
 
 		plugin.AddError(err)
-		plugin.ExitStatusCode = nagios.StateCRITICALExitCode
+		plugin.ExitStatusCode = nagios.StateUNKNOWNExitCode
 		plugin.ServiceOutput = fmt.Sprintf(
 			"%s: Failed to establish connection to database: %v",
-			nagios.StateCRITICALLabel,
+			nagios.StateUNKNOWNLabel,
 			err,
 		)
 
@@ -160,10 +160,10 @@ func main() {
 			Msg("failed to execute query")
 
 		plugin.AddError(rowCountErr)
-		plugin.ExitStatusCode = nagios.StateCRITICALExitCode
+		plugin.ExitStatusCode = nagios.StateUNKNOWNExitCode
 		plugin.ServiceOutput = fmt.Sprintf(
 			"%s: Failed to execute query against database: %v",
-			nagios.StateCRITICALLabel,
+			nagios.StateUNKNOWNLabel,
 			rowCountErr,
 		)
 
@@ -181,10 +181,10 @@ func main() {
 			Msg("no rows found in table")
 
 		plugin.AddError(rowCountErr)
-		plugin.ExitStatusCode = nagios.StateCRITICALExitCode
+		plugin.ExitStatusCode = nagios.StateUNKNOWNExitCode
 		plugin.ServiceOutput = fmt.Sprintf(
 			"%s: Email notifications history missing in table %q in database %q",
-			nagios.StateCRITICALLabel,
+			nagios.StateUNKNOWNLabel,
 			config.ILLiadDatabaseEMailTable,
 			config.ILLiadDatabase,
 		)
@@ -197,10 +197,10 @@ func main() {
 		cfg.Log.Error().Err(err).Msg("failed to execute query")
 
 		plugin.AddError(err)
-		plugin.ExitStatusCode = nagios.StateCRITICALExitCode
+		plugin.ExitStatusCode = nagios.StateUNKNOWNExitCode
 		plugin.ServiceOutput = fmt.Sprintf(
 			"%s: Failed to retrieve pending emails count: %v",
-			nagios.StateCRITICALLabel,
+			nagios.StateUNKNOWNLabel,
 			err,
 		)
 
@@ -217,12 +217,12 @@ func main() {
 		// rows, queryErr := db.Query(config.QueryILLiadEMailCancelledEmailValues)
 		if queryErr != nil {
 			plugin.AddError(queryErr)
-			plugin.ExitStatusCode = nagios.StateCRITICALExitCode
+			plugin.ExitStatusCode = nagios.StateUNKNOWNExitCode
 			cfg.Log.Error().Err(queryErr).Msg("failed to execute query")
 
 			plugin.ServiceOutput = fmt.Sprintf(
 				"%s: Failed to retrieve pending email notifications: %v",
-				nagios.StateCRITICALLabel,
+				nagios.StateUNKNOWNLabel,
 				queryErr,
 			)
 
@@ -249,12 +249,12 @@ func main() {
 			)
 			if scanErr != nil {
 				plugin.AddError(scanErr)
-				plugin.ExitStatusCode = nagios.StateCRITICALExitCode
+				plugin.ExitStatusCode = nagios.StateUNKNOWNExitCode
 				cfg.Log.Error().Err(scanErr).Msg("failed to retrieve email notification data")
 
 				plugin.ServiceOutput = fmt.Sprintf(
 					"%s: Failed to retrieve email notification data from table %q",
-					nagios.StateCRITICALLabel,
+					nagios.StateUNKNOWNLabel,
 					config.ILLiadDatabaseEMailTable,
 				)
 
@@ -270,12 +270,12 @@ func main() {
 
 		if err := rows.Err(); err != nil {
 			plugin.AddError(err)
-			plugin.ExitStatusCode = nagios.StateCRITICALExitCode
+			plugin.ExitStatusCode = nagios.StateUNKNOWNExitCode
 			cfg.Log.Error().Err(err).Msg("error occurred during rows scan loop")
 
 			plugin.ServiceOutput = fmt.Sprintf(
 				"%s: Error occurred during email notification data retrieval from table %q",
-				nagios.StateCRITICALLabel,
+				nagios.StateUNKNOWNLabel,
 				config.ILLiadDatabaseEMailTable,
 			)
 
