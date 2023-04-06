@@ -26,6 +26,35 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.2.0] - 2023-04-06
+
+### Overview
+
+- Add support for generating DEB, RPM packages
+- Build improvements
+- Generated binary changes
+  - filename patterns
+  - compression (~ 66% smaller)
+  - executable metadata
+- built using Go 1.19.8
+  - Statically linked
+  - Windows (x86, x64)
+  - Linux (x86, x64)
+
+### Added
+
+- (GH-161) Generate RPM/DEB packages using nFPM
+- (GH-162) Add version details to Windows executables
+
+### Changed
+
+- (GH-160) Switch to semantic versioning (semver) compatible versioning
+  pattern
+- (GH-163) Makefile: Compress binaries & use fixed filenames
+- (GH-164) Makefile: Refresh recipes to add "standard" set, new
+  package-related options
+- (GH-165) Build dev/stable releases using go-ci Docker image
+
 ## [v0.1.16] - 2023-04-06
 
 ### Overview
@@ -476,7 +505,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.16...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.0...HEAD
+[v0.2.0]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.0
 [v0.1.16]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.16
 [v0.1.15]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.15
 [v0.1.14]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.14
