@@ -26,6 +26,50 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.1.16] - 2023-04-06
+
+### Overview
+
+- Bug fixes
+- Dependency updates
+- GitHub Actions workflow updates
+- built using Go 1.19.8
+  - Statically linked
+  - Windows (x86, x64)
+  - Linux (x86, x64)
+
+### Added
+
+- (GH-148) Add Go Module Validation, Dependency Updates jobs
+
+### Changed
+
+- Dependencies
+  - `Go`
+    - `1.19.4` to `1.19.8`
+  - `atc0005/go-nagios`
+    - `v0.10.2` to `v0.14.0`
+  - `rs/zerolog`
+    - `v1.28.0` to `v1.29.0`
+  - `github.com/mattn/go-isatty`
+    - `v0.0.16` to `v0.0.18`
+  - `golang.org/x/crypto`
+    - `v0.3.0` to `v0.7.0`
+  - `golang.org/x/sys`
+    - `v0.3.0` to `v0.7.0`
+- CI
+  - (GH-155) Drop `Push Validation` workflow
+  - (GH-156) Rework workflow scheduling
+  - (GH-158) Remove `Push Validation` workflow status badge
+- Misc
+  - (GH-143) Update nagios library usage, add time perfdata
+
+### Fixed
+
+- (GH-169) Update vuln analysis GHAW to use on.push hook
+- (GH-173) Use UNKNOWN state for invalid command-line args
+- (GH-174) Use UNKNOWN state for email evaluation failures
+
 ## [v0.1.15] - 2022-12-09
 
 ### Overview
@@ -432,7 +476,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.15...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.1.16...HEAD
+[v0.1.16]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.16
 [v0.1.15]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.15
 [v0.1.14]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.14
 [v0.1.13]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.13
