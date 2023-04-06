@@ -141,14 +141,27 @@ been tested.
    - if using `go build`
      - look in `/tmp/check-illiad/`
 
+**NOTE**: Depending on which `Makefile` recipe you use the generated binary
+may be compressed and have an `xz` extension. If so, you should decompress the
+binary first before deploying it (e.g., `xz -d
+check_illiad_emails-linux-amd64.xz`).
+
 ### Using release binaries
 
 1. Download the [latest release][repo-url] binaries
+1. Decompress binaries
+   - e.g., `xz -d check_illiad_emails-linux-amd64.xz`
+1. Rename binaries
 1. Deploy
    - Place `check_illiad_emails` in the same location where your distro's
      package manager places other Nagios plugins
      - as `/usr/lib/nagios/plugins/check_illiad_emails` on Debian-based systems
      - as `/usr/lib64/nagios/plugins/check_illiad_emails` on RedHat-based systems
+
+**NOTE**:
+
+DEB and RPM packages are provided as an alternative to manually deploying
+binaries.
 
 ## Configuration
 
