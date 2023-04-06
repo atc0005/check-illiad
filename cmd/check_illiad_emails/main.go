@@ -21,6 +21,8 @@ import (
 	"github.com/atc0005/go-nagios"
 )
 
+//go:generate go-winres make --product-version=git-tag --file-version=git-tag
+
 func main() {
 
 	plugin := nagios.NewPlugin()
