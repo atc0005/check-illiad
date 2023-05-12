@@ -26,6 +26,30 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.2.1] - 2023-05-12
+
+### Overview
+
+- Dependency updates
+- built using Go 1.19.9
+  - Statically linked
+  - Windows (x86, x64)
+  - Linux (x86, x64)
+
+### Changed
+
+- Dependencies
+  - `Go`
+    - `1.19.8` to `1.19.9`
+  - `atc0005/go-ci`
+    - `go-ci-oldstable-build-v0.10.4` to `go-ci-oldstable-build-v0.10.5`
+  - `rs/zerolog`
+    - `v1.29.0` to `v1.29.1`
+  - `golang.org/x/sys`
+    - `v0.7.0` to `v0.8.0`
+  - `golang.org/x/crypto`
+    - `v0.7.0` to `v0.9.0`
+
 ## [v0.2.0] - 2023-04-06
 
 ### Overview
@@ -505,7 +529,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.1...HEAD
+[v0.2.1]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.1
 [v0.2.0]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.0
 [v0.1.16]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.16
 [v0.1.15]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.15
