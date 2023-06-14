@@ -26,6 +26,41 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.2.2] - 2023-06-14
+
+### Overview
+
+- Bug fixes
+- Dependency updates
+- GitHub Actions workflow updates
+- Dependency updates
+- built using Go 1.19.10
+  - Statically linked
+  - Windows (x86, x64)
+  - Linux (x86, x64)
+
+### Changed
+
+- Dependencies
+  - `Go`
+    - `1.19.9` to `1.19.10`
+  - `atc0005/go-ci`
+    - `go-ci-oldstable-build-v0.10.5` to `go-ci-oldstable-build-v0.10.6`
+  - `atc0005/go-nagios`
+    - `v0.14.0` to `v0.15.0`
+  - `mattn/go-isatty`
+    - `v0.0.18` to `v0.0.19`
+  - `golang.org/x/crypto`
+    - `v0.9.0` to `v0.10.0`
+  - `golang.org/x/sys`
+    - `v0.8.0` to `v0.9.0`
+- (GH-191) Update vuln analysis GHAW to remove on.push hook
+
+### Fixed
+
+- (GH-188) Disable depguard linter
+- (GH-194) Restore local CodeQL workflow
+
 ## [v0.2.1] - 2023-05-12
 
 ### Overview
@@ -529,7 +564,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.1...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.2...HEAD
+[v0.2.2]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.2
 [v0.2.1]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.1
 [v0.2.0]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.0
 [v0.1.16]: https://github.com/atc0005/check-illiad/releases/tag/v0.1.16
