@@ -110,10 +110,10 @@ func main() {
 		plugin.AddError(dbOpenErr)
 		plugin.ServiceOutput = fmt.Sprintf(
 			"%s: Error connecting to %s",
-			nagios.StateUNKNOWNLabel,
+			nagios.StateCRITICALLabel,
 			cfg.DBServerHost(),
 		)
-		plugin.ExitStatusCode = nagios.StateUNKNOWNExitCode
+		plugin.ExitStatusCode = nagios.StateCRITICALExitCode
 
 		// no need to go any further, we *want* to exit right away; we don't
 		// have a connection to the remote server and there isn't anything
@@ -133,10 +133,10 @@ func main() {
 		cfg.Log.Error().Err(err).Msg("error verifying connection to server")
 
 		plugin.AddError(err)
-		plugin.ExitStatusCode = nagios.StateUNKNOWNExitCode
+		plugin.ExitStatusCode = nagios.StateCRITICALExitCode
 		plugin.ServiceOutput = fmt.Sprintf(
 			"%s: Failed to establish connection to database: %v",
-			nagios.StateUNKNOWNLabel,
+			nagios.StateCRITICALLabel,
 			err,
 		)
 
