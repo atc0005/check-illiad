@@ -26,6 +26,29 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.2.4] - 2023-08-21
+
+### Added
+
+- (GH-207) Add initial automated release notes config
+- (GH-209) Add initial automated release build workflow
+
+### Changed
+
+- Dependencies
+  - `Go`
+    - `1.19.11` to `1.20.7`
+  - `atc0005/go-ci`
+    - `go-ci-oldstable-build-v0.11.3` to `go-ci-oldstable-build-v0.13.5`
+  - `rs/zerolog`
+    - `v1.29.1` to `v1.30.0`
+  - `golang.org/x/crypto`
+    - `v0.11.0` to `v0.12.0`
+  - `golang.org/x/sys`
+    - `v0.10.0` to `v0.11.0`
+- (GH-211) Update Dependabot config to monitor both branches
+- (GH-233) Update project to Go 1.20 series
+
 ## [v0.2.3] - 2023-07-13
 
 ### Overview
@@ -596,7 +619,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.3...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.4...HEAD
+[v0.2.4]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.4
 [v0.2.3]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.3
 [v0.2.2]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.2
 [v0.2.1]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.1
