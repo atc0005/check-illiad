@@ -26,6 +26,22 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.2.6] - 2023-11-17
+
+### Changed
+
+#### Dependency Updates
+
+- (GH-286) canary: bump golang from 1.20.8 to 1.20.11 in /dependabot/docker/go
+- (GH-291) docker: bump atc0005/go-ci from go-ci-oldstable-build-v0.13.12 to go-ci-oldstable-build-v0.14.1 in /dependabot/docker/builds
+- (GH-278) docker: bump atc0005/go-ci from go-ci-oldstable-build-v0.13.9 to go-ci-oldstable-build-v0.13.12 in /dependabot/docker/builds
+- (GH-280) go.mod: bump github.com/mattn/go-isatty from 0.0.19 to 0.0.20
+- (GH-264) go.mod: bump github.com/rs/zerolog from 1.30.0 to 1.31.0
+- (GH-268) go.mod: bump golang.org/x/crypto from 0.13.0 to 0.14.0
+- (GH-289) go.mod: bump golang.org/x/crypto from 0.14.0 to 0.15.0
+- (GH-269) go.mod: bump golang.org/x/sys from 0.12.0 to 0.13.0
+- (GH-284) go.mod: bump golang.org/x/sys from 0.13.0 to 0.14.0
+
 ## [v0.2.5] - 2023-10-06
 
 ### Changed
@@ -634,7 +650,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.5...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.6...HEAD
+[v0.2.6]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.6
 [v0.2.5]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.5
 [v0.2.4]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.4
 [v0.2.3]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.3
