@@ -26,6 +26,18 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.2.8] - 2024-01-19
+
+### Changed
+
+#### Dependency Updates
+
+- (GH-314) canary: bump golang from 1.20.12 to 1.20.13 in /dependabot/docker/go
+- (GH-317) docker: bump atc0005/go-ci from go-ci-oldstable-build-v0.14.2 to go-ci-oldstable-build-v0.14.3 in /dependabot/docker/builds
+- (GH-305) ghaw: bump github/codeql-action from 2 to 3
+- (GH-313) go.mod: bump golang.org/x/crypto from 0.16.0 to 0.18.0
+- (GH-310) go.mod: bump golang.org/x/sys from 0.15.0 to 0.16.0
+
 ## [v0.2.7] - 2023-12-09
 
 ### Changed
@@ -661,7 +673,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.7...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.8...HEAD
+[v0.2.8]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.8
 [v0.2.7]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.7
 [v0.2.6]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.6
 [v0.2.5]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.5
