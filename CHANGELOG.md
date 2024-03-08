@@ -26,6 +26,25 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.2.10] - 2024-03-08
+
+### Changed
+
+#### Dependency Updates
+
+- (GH-368) Add todo/release label to "Go Runtime" PRs
+- (GH-357) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.15.2 to go-ci-oldstable-build-v0.15.3 in /dependabot/docker/builds
+- (GH-366) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.15.3 to go-ci-oldstable-build-v0.15.4 in /dependabot/docker/builds
+- (GH-353) canary: bump golang from 1.21.6 to 1.21.7 in /dependabot/docker/go
+- (GH-350) docker: bump atc0005/go-ci from go-ci-oldstable-build-v0.15.0 to go-ci-oldstable-build-v0.15.2 in /dependabot/docker/builds
+- (GH-358) Go Dependency: Bump golang.org/x/crypto from 0.19.0 to 0.20.0
+- (GH-363) Go Dependency: Bump golang.org/x/crypto from 0.20.0 to 0.21.0
+- (GH-362) Go Dependency: Bump golang.org/x/sys from 0.17.0 to 0.18.0
+- (GH-365) Go Runtime: Bump golang from 1.21.7 to 1.21.8 in /dependabot/docker/go
+- (GH-355) Update Dependabot PR prefixes (redux)
+- (GH-354) Update Dependabot PR prefixes
+- (GH-352) Update project to Go 1.21 series
+
 ## [v0.2.9] - 2024-02-16
 
 ### Changed
@@ -690,7 +709,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.9...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.10...HEAD
+[v0.2.10]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.10
 [v0.2.9]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.9
 [v0.2.8]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.8
 [v0.2.7]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.7
