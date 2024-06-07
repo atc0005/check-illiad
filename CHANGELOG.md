@@ -26,6 +26,25 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.2.13] - 2024-06-07
+
+### Changed
+
+#### Dependency Updates
+
+- (GH-409) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.20.4 to go-ci-oldstable-build-v0.20.5 in /dependabot/docker/builds
+- (GH-413) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.20.5 to go-ci-oldstable-build-v0.20.6 in /dependabot/docker/builds
+- (GH-423) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.20.6 to go-ci-oldstable-build-v0.20.7 in /dependabot/docker/builds
+- (GH-408) Go Dependency: Bump github.com/alexflint/go-arg from 1.4.3 to 1.5.0
+- (GH-411) Go Dependency: Bump github.com/rs/zerolog from 1.32.0 to 1.33.0
+- (GH-419) Go Dependency: Bump golang.org/x/crypto from 0.23.0 to 0.24.0
+- (GH-420) Go Dependency: Bump golang.org/x/sys from 0.20.0 to 0.21.0
+- (GH-418) Go Runtime: Bump golang from 1.21.10 to 1.21.11 in /dependabot/docker/go
+
+### Fixed
+
+- (GH-415) Remove inactive maligned linter
+
 ## [v0.2.12] - 2024-05-11
 
 ### Changed
@@ -737,7 +756,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.12...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.13...HEAD
+[v0.2.13]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.13
 [v0.2.12]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.12
 [v0.2.11]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.11
 [v0.2.10]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.10
