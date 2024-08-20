@@ -9,6 +9,7 @@ package main
 
 import (
 	"database/sql"
+	"errors"
 	"fmt"
 	"time"
 
@@ -365,7 +366,7 @@ func main() {
 				plugin.ExitStatusCode = nagios.StateWARNINGExitCode
 			}
 
-			plugin.AddError(fmt.Errorf(summaryMsg))
+			plugin.AddError(errors.New(summaryMsg))
 			plugin.ServiceOutput = fmt.Sprintf(
 				"%s: %s [CRITICAL: %v, WARNING: %v, total pending: %d]",
 				nagios.StateCRITICALLabel,
