@@ -26,6 +26,31 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.2.15] - 2024-08-21
+
+### Changed
+
+#### Dependency Updates
+
+- (GH-450) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.21.4 to go-ci-oldstable-build-v0.21.5 in /dependabot/docker/builds
+- (GH-453) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.21.5 to go-ci-oldstable-build-v0.21.6 in /dependabot/docker/builds
+- (GH-456) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.21.6 to go-ci-oldstable-build-v0.21.7 in /dependabot/docker/builds
+- (GH-464) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.21.7 to go-ci-oldstable-build-v0.21.8 in /dependabot/docker/builds
+- (GH-472) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.21.8 to go-ci-oldstable-build-v0.21.9 in /dependabot/docker/builds
+- (GH-461) Go Dependency: Bump golang.org/x/crypto from 0.25.0 to 0.26.0
+- (GH-459) Go Dependency: Bump golang.org/x/sys from 0.22.0 to 0.23.0
+- (GH-467) Go Dependency: Bump golang.org/x/sys from 0.23.0 to 0.24.0
+- (GH-476) Go Runtime: Bump golang from 1.21.12 to 1.22.6 in /dependabot/docker/go
+- (GH-473) Update project to Go 1.22 series
+
+#### Other
+
+- (GH-457) Push `REPO_VERSION` var into containers for builds
+
+### Fixed
+
+- (GH-475) Fix govet linting errors raised by updated linter
+
 ## [v0.2.14] - 2024-07-10
 
 ### Changed
@@ -771,7 +796,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.14...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.15...HEAD
+[v0.2.15]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.15
 [v0.2.14]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.14
 [v0.2.13]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.13
 [v0.2.12]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.12
