@@ -26,6 +26,23 @@ The following types of changes will be recorded in this file:
 
 - placeholder
 
+## [v0.2.16] - 2024-11-13
+
+### Changed
+
+#### Dependency Updates
+
+- (GH-491) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.21.12 to go-ci-oldstable-build-v0.21.13 in /dependabot/docker/builds
+- (GH-514) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.21.13 to go-ci-oldstable-build-v0.21.15 in /dependabot/docker/builds
+- (GH-489) Build Image: Bump atc0005/go-ci from go-ci-oldstable-build-v0.21.9 to go-ci-oldstable-build-v0.21.12 in /dependabot/docker/builds
+- (GH-513) Go Dependency: Bump github.com/atc0005/go-nagios from 0.16.1 to 0.17.1
+- (GH-488) Go Dependency: Bump golang.org/x/crypto from 0.26.0 to 0.27.0
+- (GH-506) Go Dependency: Bump golang.org/x/crypto from 0.27.0 to 0.29.0
+- (GH-484) Go Dependency: Bump golang.org/x/sys from 0.24.0 to 0.25.0
+- (GH-507) Go Dependency: Bump golang.org/x/sys from 0.25.0 to 0.27.0
+- (GH-486) Go Runtime: Bump golang from 1.22.6 to 1.22.7 in /dependabot/docker/go
+- (GH-504) Go Runtime: Bump golang from 1.22.7 to 1.22.9 in /dependabot/docker/go
+
 ## [v0.2.15] - 2024-08-21
 
 ### Changed
@@ -796,7 +813,8 @@ file for additional details.
     - x86
     - x64
 
-[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.15...HEAD
+[Unreleased]: https://github.com/atc0005/check-illiad/compare/v0.2.16...HEAD
+[v0.2.16]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.16
 [v0.2.15]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.15
 [v0.2.14]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.14
 [v0.2.13]: https://github.com/atc0005/check-illiad/releases/tag/v0.2.13
